@@ -5,7 +5,7 @@ import Filter from "./Filter/Filter";
 import ContactForm from "./ContactForm/ContactForm";
 import { useSelector, useDispatch } from "react-redux";
 import PhonebookAuth from 'modules/Phonebook/NavBarAuth/PhonebookAuth';
-import NavBarUser from "./NavBarUser/NavBarUser";
+import UserMenu from "./UserMenu/UserMenu";
 import { isUserLogin } from "redux/auth/auth-selector";
 import { setFilter } from "redux/filter/filter-slice";
 import { getFilteredContacts } from "redux/contacts/contacts-selectors";
@@ -39,7 +39,7 @@ const Phonebook = () => {
     return (
         <div>
             {!isLogin && <PhonebookAuth />}
-            {isLogin && <NavBarUser />}
+            {isLogin && <UserMenu />}
             <h3>Phonebook</h3>
             <div>
                 <div className={styles.wrapper}>
