@@ -1,0 +1,19 @@
+.title {
+    color: #004a43;
+    font-size: 35px;
+}
+
+.filterName {
+    color: #004a43;
+    font-size: 20px;
+
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(84.89deg, #FFAC3E 3.95%, #EB404E 95.89%);
+    width: 100%;
+    padding: 20px;
+}

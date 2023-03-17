@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import styles from './phonebook.modules.css';
 import ContactList from "./ContactList/ContactList";
 import Filter from "./Filter/Filter";
 import ContactForm from "./ContactForm/ContactForm";
@@ -11,6 +10,7 @@ import { setFilter } from "redux/filter/filter-slice";
 import { getFilteredContacts } from "redux/contacts/contacts-selectors";
 import { getFilter } from "redux/filter/filter-selectors";
 import { fetchAllContacts, fetchAddContact, fetchDeleteContact } from "redux/contacts/contacts-operatins";
+import style from "./phonebook.module.css";
 
 const Phonebook = () => {
 
@@ -39,15 +39,14 @@ const Phonebook = () => {
     return (
         <div>
             {!isLogin && <PhonebookAuth />}
-            {isLogin && <UserMenu />}
-            <h3>Phonebook</h3>
+            {isLogin && <UserMenu className={style.menu} />}
+            <h3 className={style.title}>Phonebook</h3>
             <div>
-                <div className={styles.wrapper}>
-                    <h4>Name</h4>
+                <div className={style.wrapper}>
+
                     <ContactForm onSubmit={onAddContact} />
                 </div>
                 <div>
-                    <h4>Contacts</h4>
                     <Filter value={filter} handelChange={handelFilter} />
                     <ContactList removeContact={onRemoveContact} items={filteredContacts} />
                 </div>

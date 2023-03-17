@@ -1,4 +1,19 @@
 .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(84.89deg, #FFAC3E 3.95%, #EB404E 95.89%);
+
+}
+
+.form input {
+
+    width: 100%;
+    height: 30px;
+    border: 1px solid #004a43;
+}
+
+.form button {
     width: 400px;
-    padding: 20px;
+
 }

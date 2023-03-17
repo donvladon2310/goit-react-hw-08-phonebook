@@ -1,7 +1,7 @@
 import RegisterForm from "modules/RegisterForm/RegisterForm";
 import { useDispatch } from "react-redux";
 import { signup } from "../../../redux/auth/auth-operation";
-
+import style from "./register-psge.module.css"
 const RegisterPage = () => {
     const dispatch = useDispatch();
     const handelSignup = (data) => {
@@ -10,7 +10,7 @@ const RegisterPage = () => {
 
     return (
         <div className="container">
-            <h1 className="page-titel">Register Page</h1>
+            <h1 className={style.pagetitel}>Register Page</h1>
             <RegisterForm onSubmit={handelSignup} />
         </div>
     )

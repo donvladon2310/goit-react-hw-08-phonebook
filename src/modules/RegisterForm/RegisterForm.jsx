@@ -9,10 +9,10 @@ const RegisterForm = ({ onSubmit }) => {
     const { name, email, password } = state;
     return (
         <form onSubmit={handleSubmit} className={style.form}>
-            <TextField value={name} handelChange={handleChange} {...fields.name} />
-            <TextField value={email} handelChange={handleChange} {...fields.email} />
-            <TextField value={password} handelChange={handleChange} {...fields.password} />
-            <Button>Register</Button>
+            <TextField value={name} handelChange={handleChange} {...fields.name} className={style.input} />
+            <TextField value={email} handelChange={handleChange} {...fields.email} className={style.input} />
+            <TextField value={password} handelChange={handleChange} {...fields.password} className={style.input} />
+            <Button className={style.button}>Register</Button>
         </form>
     )
 }

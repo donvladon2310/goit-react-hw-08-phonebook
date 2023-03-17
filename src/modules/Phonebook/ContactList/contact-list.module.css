@@ -1,7 +1,12 @@
+.items {
+    color: #004a43;
+    font-size: 20px;
+}
+
 .btn {
     background-color: #fff;
     border: 1px solid #004a43;
-    padding: 10px 15px;
+    padding: 3px 10px;
     cursor: pointer;
     border-radius: 5px;
     color: #004a43;

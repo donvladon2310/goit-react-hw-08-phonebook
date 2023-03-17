@@ -1,6 +1,6 @@
 import { useState } from "react"
 import PropTyper from "prop-types";
-
+import style from "./contact-form.module.css"
 
 const ContactForm = ({ onSubmit }) => {
     const [state, setState] = useState({
@@ -26,7 +26,8 @@ const ContactForm = ({ onSubmit }) => {
     const { name, phone } = state;
 
     return (
-        <form onSubmit={handelSubmit}>
+        <form onSubmit={handelSubmit} className={style.form}>
+            <h4 className={style.titel}>Name</h4>
             <div>
                 <input
                     onChange={handelChange}
@@ -38,7 +39,7 @@ const ContactForm = ({ onSubmit }) => {
                     required
                 />
             </div>
-            <h4>Number</h4>
+            <h4 className={style.titel}>Number</h4>
             <div>
                 <input
                     onChange={handelChange}
@@ -50,7 +51,7 @@ const ContactForm = ({ onSubmit }) => {
                     required
                 />
             </div>
-            <button type='submit'>Add Contact</button>
+            <button className={style.btn} type='submit'>Add Contact</button>
         </form>
     )
 }
