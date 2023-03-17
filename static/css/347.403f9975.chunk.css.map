@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/347.403f9975.chunk.css","mappings":"AAAA,MACI,mBACJ,CAEA,SACI,qBACJ","sources":["modules/Phonebook/phonebook.modules.css"],"sourcesContent":[".form {\n    margin-bottom: 100px;\n}\n\n.wrapper {\n    border: 1px solid black;\n}"],"names":[],"sourceRoot":""}
