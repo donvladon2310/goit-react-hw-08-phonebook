@@ -5,7 +5,7 @@ import style from "./contact-form.module.css"
 const ContactForm = ({ onSubmit }) => {
     const [state, setState] = useState({
         name: "",
-        phone: "",
+        number: "",
     });
 
     const handelChange = ({ target }) => {
@@ -19,11 +19,11 @@ const ContactForm = ({ onSubmit }) => {
 
     const handelSubmit = e => {
         e.preventDefault();
-        onSubmit({ name, phone });
-        setState({ name: "", phone: "", });
+        onSubmit({ name, number });
+        setState({ name: "", number: "", });
     }
 
-    const { name, phone } = state;
+    const { name, number } = state;
 
     return (
         <form onSubmit={handelSubmit} className={style.form}>
@@ -43,9 +43,9 @@ const ContactForm = ({ onSubmit }) => {
             <div>
                 <input
                     onChange={handelChange}
-                    value={phone}
+                    value={number}
                     type="tel"
-                    name="phone"
+                    name="number"
                     pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
                     title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
                     required

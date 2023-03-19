@@ -3,9 +3,8 @@ import PropTypes from "prop-types";
 import style from "./contact-list.module.css";
 
 const ContactList = ({ removeContact, items }) => {
-    const contacts = items.map(({ id, name, phone }) => <li className={style.items} key={id}>{name}: {phone}
+    const contacts = items.map(({ id, name, number }) => <li className={style.items} key={id}>{name}: {number}
         <button className={style.btn} onClick={() => removeContact(id)} type="button">delete</button></li>)
-    console.log(items)
     return (
         <ul >
             {contacts}
@@ -21,12 +20,13 @@ ContactList.defaultProps = {
     items: []
 }
 
-ContactList.PropTypes = {
+ContactList.propTypes = {
     removeContact: PropTypes.func.isRequired,
     items: PropTypes.arrayOf(PropTypes.shape({
-        id: PropTypes.string.isRequireds,
-        name: PropTypes.string.isRequireds,
-        phone: PropTypes.string.isRequireds,
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        number: PropTypes.string.isRequired,
     }))
 }
+
 
