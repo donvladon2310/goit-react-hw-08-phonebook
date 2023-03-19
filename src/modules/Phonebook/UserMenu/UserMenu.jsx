@@ -5,7 +5,7 @@ import { getUser } from "redux/auth/auth-selector";
 import style from "./user-menu.module.css"
 
 const UserMenu = () => {
-
+    const { email } = useSelector(getUser);
     const dispatch = useDispatch();
 
     const onLogout = () => {
@@ -14,7 +14,7 @@ const UserMenu = () => {
 
     return (
         <div>
-            Hello! <button className={style.btn} onClick={onLogout}>Logout</button>
+            Hello, {email}! <button className={style.btn} onClick={onLogout}>Logout</button>
         </div>
     )
 }
