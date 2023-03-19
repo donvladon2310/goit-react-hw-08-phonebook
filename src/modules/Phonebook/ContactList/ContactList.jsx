@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import style from "./contact-list.module.css";
 
 const ContactList = ({ removeContact, items }) => {
-    const contacts = items.map(({ _id, name, phone }) => <li className={style.items} key={_id}>{name}: {phone}
-        <button className={style.btn} onClick={() => removeContact(_id)} type="button">delete</button></li>)
-
+    const contacts = items.map(({ id, name, phone }) => <li className={style.items} key={id}>{name}: {phone}
+        <button className={style.btn} onClick={() => removeContact(id)} type="button">delete</button></li>)
+    console.log(items)
     return (
         <ul >
             {contacts}
