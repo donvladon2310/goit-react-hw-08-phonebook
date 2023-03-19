@@ -1,3 +1,4 @@
+import PhonebookAuth from "modules/Phonebook/NavBarAuth/PhonebookAuth";
 import RegisterForm from "modules/RegisterForm/RegisterForm";
 import { useDispatch } from "react-redux";
 import { signup } from "../../../redux/auth/auth-operation";
@@ -10,6 +11,7 @@ const RegisterPage = () => {
 
     return (
         <div className="container">
+            <PhonebookAuth />
             <h1 className={style.pagetitel}>Register Page</h1>
             <RegisterForm onSubmit={handelSignup} />
         </div>

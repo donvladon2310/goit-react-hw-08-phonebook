@@ -6,7 +6,6 @@ const PhonebookAuth = () => {
         <div className={style.headernav}>
             <NavLink to="/register" className={style.link}>Register</NavLink>
             <NavLink to="/login" className={style.link}>Login</NavLink>
-            <p className={style.text}>Registration and login are required to continue using the website</p>
         </div>
     )
 }
