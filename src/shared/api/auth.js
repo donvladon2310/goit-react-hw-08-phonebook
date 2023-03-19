@@ -8,22 +8,22 @@ const setToken = token => {
     if (token) {
         return instance.defaults.headers.authorization = `Bearer ${token} `;
     }
-    instance.defaults.headers.authorization = "";
+    instance.defaults.headers.authorization = '';
 }
 
-export const signup = async (user) => {
-    const { data } = await instance.post("/users/signup", user);
+export const signup = async data => {
+    const { data: result } = await instance.post("/users/signup", data);
     setToken(data.token);
-    return data;
+    return result;
 }
 
-export const login = async (user) => {
-    const { data } = await instance.post("/users/login", user);
+export const login = async data => {
+    const { data: result } = await instance.post("/users/login", data);
     setToken(data.token);
-    return data;
+    return result;
 }
 
-export const getCurrent = async (token) => {
+export const getCurrent = async token => {
     try {
         setToken(token);
         const { data } = await instance.get("/users/current");
